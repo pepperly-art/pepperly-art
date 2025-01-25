@@ -86,7 +86,7 @@ export default function (eleventyConfig) {
   eleventyConfig.on('eleventy.after', async ({ dir, results, runMode, outputMode }) => {
     return esbuild.build({
       entryPoints: ['_site/_app/_app.js'],
-      outfile: 'public/_assets/js/_app.js',
+      outfile: 'docs/_assets/js/_app.js',
       bundle: true,
       minify: true,
       sourcemap: false,
@@ -99,7 +99,7 @@ export default function (eleventyConfig) {
     htmlTemplateEngine: 'njk',
     dir: {
       input: '_site',
-      output: 'public',
+      output: 'docs',
     },
     pathPrefix: '/',
   };
