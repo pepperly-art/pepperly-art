@@ -5,7 +5,8 @@
   "scripts": {
     "start": "eleventy --serve --quiet",
     "build": "eleventy",
-    "ghpages": "eleventy --pathprefix=11ty-twind"
+    "ghpages": "eleventy --pathprefix=11ty-twind",
+    "deploy": "npm run build && node _scripts/index.js"
   },
   "keywords": [
     "11ty",
@@ -20,6 +21,7 @@
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@alpinejs/focus": "^3.14.7",
+    "@inquirer/prompts": "^7.2.4",
     "@twind/core": "^1.1.3",
     "@twind/preset-autoprefix": "^1.0.7",
     "@twind/preset-line-clamp": "^1.0.7",
@@ -33,5 +35,10 @@
     "js-yaml": "^4.1.0",
     "markdown-it-attrs": "^4.1.6",
     "tippy.js": "^6.3.7"
+  },
+  "dependencies": {
+    "cjs-loader": "^0.1.0",
+    "cjs-module": "^1.5.0",
+    "inquirer": "^12.3.3"
   }
 }
